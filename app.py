@@ -29,7 +29,7 @@ while i < len(filenames):
     file = open("data/" + filenames[i], "r", encoding='utf-8') #encoding for special characters
     try:
         file = json.load(file) #parse and validate json
-        print("validated " + filenames[i] + "\n")
+        # print("validated " + filenames[i] + "\n")
         x = col.insert_one(file)
     except Exception:
         print("Error loading file:" + filenames[i])

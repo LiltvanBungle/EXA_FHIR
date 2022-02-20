@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+
+  mongo:
+    image: mongo
+    command: --serviceExecutor adaptive
+  
+  exafhir:
+    image: exafhir
+    build:
+  
+      context: .
+      dockerfile: ./Dockerfile
